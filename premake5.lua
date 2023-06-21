@@ -5,7 +5,8 @@ project "ppm"
     kind "ConsoleAPp"
     language "c++"
     cppdialect "c++17"
-    targetdir "bin/%{cfg.buildcfg}"
+    targetdir "build/bin/%{cfg.buildcfg}"
+    objdir "build/obj/%{cfg.buildcfg}"
     includedirs { "include", "src" }
     files { "src/**.cpp", "src/**.h" }
 
