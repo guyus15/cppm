@@ -1,4 +1,4 @@
-#include <ppm/ppm_image.h>
+#include <cppm/ppm_image.h>
 
 #include <stack>
 

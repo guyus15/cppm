@@ -1,4 +1,4 @@
-#include <ppm/ppm_writer.h>
+#include <cppm/ppm_writer.h>
 
 #include <fstream>
 #include <iostream>
