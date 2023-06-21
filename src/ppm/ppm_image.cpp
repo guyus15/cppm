@@ -46,7 +46,6 @@ void PpmImage::FillPixels(const uint32_t x, const uint32_t y, const uint32_t col
     {
         auto& [sc, sr] = unvisited.top();
         unvisited.pop();
-        SetPixel(sc, sr, colour);
 
         if (sr + 1 < static_cast<int>(m_data.size()) && m_data[sr + 1][sc] == target_colour)
             unvisited.push({ sc, sr + 1 });
@@ -57,6 +56,8 @@ void PpmImage::FillPixels(const uint32_t x, const uint32_t y, const uint32_t col
             unvisited.push({ sc + 1, sr });
         if (sc - 1 >= 0 && m_data[sr][sc - 1] == target_colour)
             unvisited.push({ sc - 1, sr });
+
+        SetPixel(sc, sr, colour);
     }
 }
 
